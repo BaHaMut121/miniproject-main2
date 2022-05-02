@@ -19,6 +19,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { TakeOffClassComponent } from './component/take-off-class/take-off-class.component';
 import { AddLessonComponent } from './component/add-lesson/add-lesson.component';
 import { MatDialogModule} from '@angular/material/dialog';
+import { PopUpComponent } from './pop-ups/pop-up/pop-up.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { MatDialogModule} from '@angular/material/dialog';
     RegistrationComponent,
     TakeOffClassComponent,
     AddLessonComponent,
+    PopUpComponent,
 
   ],
   imports: [
@@ -45,6 +47,7 @@ import { MatDialogModule} from '@angular/material/dialog';
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents:[PopUpComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

@@ -11,5 +11,10 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onConfirm(){
+    if(confirm('ยืนยันการลงทะเบียนใช่หรือไม่ ?')){
+
+    }
+  }
 
 }

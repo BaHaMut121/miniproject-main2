@@ -1,13 +1,14 @@
-<div class="homepage-wrapper" fxLayout="" fxLayoutAlign="center center">
 
-<h1>ลงทะเบียนเรียน</h1>
+<div class="homepage-wrapper" fxLayout="" fxLayoutAlign="center center">
+  <h1>ดูวิชาที่สอน</h1>
 
 </div>
-
+<label>ชื่ออาจารย์ :>></label> <input type="text" class="form" #myNameInputtext><a>..</a>
+<button type="button" class="btn btn-danger" (click)="onSee(myNameInputtext.value)">ค้นหา</button>
 <table class="table">
+
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">รหัสวิชา</th>
       <th scope="col">วิชาเรียน</th>
       <th scope="col">หน่วยกิต</th>
@@ -17,9 +18,8 @@
       <th scope="col">เทอม</th>
     </tr>
   </thead>
-  <tbody *ngFor="let book of bookList">
+  <tbody  *ngFor="let book of bookList">
     <tr>
-      <td><mat-checkbox></mat-checkbox></td>
       <td>{{book.id_course}}</td>
       <td>{{book.Name_course}}</td>
       <td>{{book.credit}}</td>
@@ -30,6 +30,7 @@
     </tr>
   </tbody>
 </table>
-<br>
-<br>
-<button type="button" class="btn btn-success" (click)="onConfirm()">ยืนยันการลงทะเบียน</button>
+
+
+
+

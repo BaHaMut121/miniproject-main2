@@ -20,6 +20,10 @@ import { TakeOffClassComponent } from './component/take-off-class/take-off-class
 import { AddLessonComponent } from './component/add-lesson/add-lesson.component';
 import { MatDialogModule} from '@angular/material/dialog';
 import { PopUpComponent } from './pop-ups/pop-up/pop-up.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddCoursbeByTeacherComponent } from './components/add-coursbe-by-teacher/add-coursbe-by-teacher.component';
+import { SeeSubjectComponent } from './components/see-subject/see-subject.component';
+
 
 
 @NgModule({
@@ -31,6 +35,9 @@ import { PopUpComponent } from './pop-ups/pop-up/pop-up.component';
     TakeOffClassComponent,
     AddLessonComponent,
     PopUpComponent,
+    AddCoursbeByTeacherComponent,
+    SeeSubjectComponent,
+
 
   ],
   imports: [
@@ -43,7 +50,8 @@ import { PopUpComponent } from './pop-ups/pop-up/pop-up.component';
     FlexLayoutModule,
     MatRadioModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

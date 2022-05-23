@@ -8,34 +8,27 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">รหัสวิชา-รายเรียน</th>
-      <th scope="col">หน่อยกิต</th>
-      <th scope="col">ตอนเรียน-วันเวลาเรียน</th>
+      <th scope="col">รหัสวิชา</th>
+      <th scope="col">วิชาเรียน</th>
+      <th scope="col">หน่วยกิต</th>
+      <th scope="col">ตอนเรียน</th>
+      <th scope="col">วันเวลาเรียน</th>
       <th scope="col">อาจารย์ผู้สอน</th>
+      <th scope="col">เทอม</th>
 
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngFor="let book of bookList">
     <tr>
-      <td>040203102 MATHEMATICS II</td>
-      <td>3(2-2)</td>
-      <td>S.1 T 9.00-12.00</td>
-      <td>ccc</td>
+      <td>{{book.id_course}}</td>
+      <td>{{book.Name_course}}</td>
+      <td>{{book.credit}}</td>
+      <td>{{book.section}}</td>
+      <td>{{book.class_date}}</td>
+      <td>{{book.lecturer}}</td>
+      <td>{{book.term}}</td>
 
     </tr>
-    <tr>
-      <td>040613348 SOFTWARE</td>
-      <td>3(2-2)</td>
-      <td>S.2 F 9.00-12.00</td>
-      <td>MUN</td>
 
-    </tr>
-    <tr>
-      <td>040613393 NUMERICAL</td>
-      <td>3(2-2)</td>
-      <td>S.1 M 13.00-15.00</td>
-      <td>JJJ</td>
-
-    </tr>
   </tbody>
 </table>

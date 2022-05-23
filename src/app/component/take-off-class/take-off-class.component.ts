@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { book } from '../../test-regi';
 
 @Component({
   selector: 'app-take-off-class',
@@ -6,14 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./take-off-class.component.css']
 })
 export class TakeOffClassComponent implements OnInit {
-
-  constructor() { }
+  bookList:book[] = [];
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get<book[]>('http://localhost:3200/regist').subscribe(response=> {this.bookList = response})
   }
 
-  onDelete(){
+  onDelete(id:number){
     if(confirm('ต้องการถอดวิชาใช่ไหม ?')){
+      this.http.delete<book[]>('http://localhost:3200/regist/'+id).subscribe(responsess=> {this.bookList = responsess})
 
     }
   }

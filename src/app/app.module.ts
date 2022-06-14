@@ -23,6 +23,7 @@ import { PopUpComponent } from './pop-ups/pop-up/pop-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddCoursbeByTeacherComponent } from './components/add-coursbe-by-teacher/add-coursbe-by-teacher.component';
 import { SeeSubjectComponent } from './components/see-subject/see-subject.component';
+import { ResultComponent } from './component/result/result.component';
 
 
 
@@ -37,6 +38,7 @@ import { SeeSubjectComponent } from './components/see-subject/see-subject.compon
     PopUpComponent,
     AddCoursbeByTeacherComponent,
     SeeSubjectComponent,
+    ResultComponent,
 
 
   ],

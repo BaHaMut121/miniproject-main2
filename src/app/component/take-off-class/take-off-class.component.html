@@ -1,5 +1,6 @@
-
-<div class="homepage-wrapper" fxLayout="" fxLayoutAlign="center center">
+<div class="container">
+  <div class="hh">
+    <div class="homepage-wrapper" fxLayout="" fxLayoutAlign="center center">
   <h1>ถอนวิชาเรียน</h1>
 
 </div>
@@ -12,23 +13,26 @@
       <th scope="col">ตอนเรียน</th>
       <th scope="col">วันเวลาเรียน</th>
       <th scope="col">อาจารย์ผู้สอน</th>
-      <th scope="col">เทอม</th>
+      <th scope="col">ปีการศึกษา</th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody  *ngFor="let book of bookList">
     <tr>
-      <td>{{book.id_course}}</td>
-      <td>{{book.Name_course}}</td>
+      <td>{{book.coursetext_id}}</td>
+      <td>{{book.course_Name}}</td>
       <td>{{book.credit}}</td>
       <td>{{book.section}}</td>
       <td>{{book.class_date}}</td>
       <td>{{book.lecturer}}</td>
-      <td>{{book.term}}</td>
-      <td><button type="button" class="btn btn-danger" (click)="onDelete(book.id)">ถอนวิชาเรียน</button></td>
+      <td>{{book.year}}</td>
+      <td><button type="button" class="btn btn-danger" (click)="onDelete(book.course_id)">ถอนวิชาเรียน</button></td>
     </tr>
   </tbody>
 </table>
+  </div>
+</div>
+
 
 
 

@@ -1,35 +1,43 @@
-<div class="homepage-wrapper" fxLayout="" fxLayoutAlign="center center">
+<div class="container">
+  <div class="hh">
+    <div class="homepage-wrapper" fxLayout="" fxLayoutAlign="center center">
 
 <h1>ลงทะเบียนเรียน</h1>
 
 </div>
-
-<table class="table">
+<form>
+  <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th  scope="col">#</th>
       <th scope="col">รหัสวิชา</th>
       <th scope="col">วิชาเรียน</th>
       <th scope="col">หน่วยกิต</th>
       <th scope="col">ตอนเรียน</th>
       <th scope="col">วันเวลาเรียน</th>
       <th scope="col">อาจารย์ผู้สอน</th>
-      <th scope="col">เทอม</th>
+      <th scope="col">ปีการศึกษา</th>
     </tr>
   </thead>
   <tbody *ngFor="let book of bookList">
     <tr>
-      <td><mat-checkbox></mat-checkbox></td>
-      <td>{{book.id_course}}</td>
-      <td>{{book.Name_course}}</td>
+      <td><input type="checkbox"id="flexCheckDefault" (click)="select(book.coursetext_id,book.course_Name,book.credit,book.section,book.class_date,book.lecturer,book.year)"></td>
+      <td>{{book.coursetext_id}}</td>
+      <td>{{book.course_Name}}</td>
       <td>{{book.credit}}</td>
       <td>{{book.section}}</td>
       <td>{{book.class_date}}</td>
       <td>{{book.lecturer}}</td>
-      <td>{{book.term}}</td>
+      <td>{{book.year}}</td>
     </tr>
   </tbody>
 </table>
 <br>
 <br>
 <button type="button" class="btn btn-success" (click)="onConfirm()">ยืนยันการลงทะเบียน</button>
+</form>
+
+
+  </div>
+</div>
+

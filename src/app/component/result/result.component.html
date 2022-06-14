@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="hh">
+<div class="homepage-wrapper" fxLayout="" fxLayoutAlign="center center">
+  <h1>ผลการลงทะเบียน</h1>
+</div>
+<label for="cars">Choose a car:</label>
+
+<select name="cars" id="cars" #myNameInputtext (click)="g(myNameInputtext.value)">
+  <option value="1-2564">1-2564</option>
+  <option value="1-2565">1-2565</option>
+  <option value="1-2565">1-2565</option>
+  <option value="2-2565">2-2565</option>
+</select>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">รหัสวิชา</th>
+        <th scope="col">วิชาเรียน</th>
+        <th scope="col">หน่วยกิต</th>
+        <th scope="col">ตอนเรียน</th>
+        <th scope="col">วันเวลาเรียน</th>
+        <th scope="col">อาจารย์ผู้สอน</th>
+        <th scope="col">ปีการศึกษา</th>
+
+      </tr>
+    </thead>
+    <tbody *ngFor="let regi of registList">
+      <tr>
+        <td>{{regi.subject_id}}</td>
+        <td>{{regi.subject}}</td>
+        <td>{{regi.Grade}}</td>
+        <td>{{regi.regis_sec}}</td>
+        <td>{{regi.regis_date}}</td>
+        <td>{{regi.regist_lecturer}}</td>
+        <td>{{regi.semesterm}}</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+</div>
+

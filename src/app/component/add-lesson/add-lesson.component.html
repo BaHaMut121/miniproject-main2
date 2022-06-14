@@ -1,4 +1,5 @@
-
+<div class="container">
+  <div class="hh">
 <div class="homepage-wrapper" fxLayout="" fxLayoutAlign="center center">
   <h1>เพิ่มวิชาเรียน</h1>
 
@@ -14,21 +15,23 @@
       <th scope="col">ตอนเรียน</th>
       <th scope="col">วันเวลาเรียน</th>
       <th scope="col">อาจารย์ผู้สอน</th>
-      <th scope="col">เทอม</th>
+      <th scope="col">ปีการศึกษา</th>
 
     </tr>
   </thead>
   <tbody *ngFor="let book of bookList">
     <tr>
-      <td>{{book.id_course}}</td>
-      <td>{{book.Name_course}}</td>
+      <td>{{book.coursetext_id}}</td>
+      <td>{{book.course_Name}}</td>
       <td>{{book.credit}}</td>
       <td>{{book.section}}</td>
       <td>{{book.class_date}}</td>
       <td>{{book.lecturer}}</td>
-      <td>{{book.term}}</td>
+      <td>{{book.year}}</td>
 
     </tr>
 
   </tbody>
 </table>
+</div>
+</div>

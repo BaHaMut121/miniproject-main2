@@ -1,0 +1,137 @@
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Times;
+}
+
+* li {
+  list-style: none;
+}*/
+.container {
+  min-height: 120vh;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  position: relative;
+}
+.bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bg::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  filter: brightness(45%);
+  background-image: url("src/assets/img/9.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  width: 50%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+.KMUTNB {
+  color: rgb(255, 255, 255);
+  padding: 25px;
+  font-family: Times;
+}
+.card {
+  margin-right: -375px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  background-image: none;
+  background-color: transparent;
+}
+.card h2 {
+  color: #ffffff;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+
+}
+.card .box1,
+.box3{
+  width: 100%;
+  height: 220px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-radius: 35% 10%;
+  cursor: pointer;
+
+}
+.card .box2,
+.box4{
+  width: 100%;
+  height: 220px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-radius: 10% 35%;
+  cursor: pointer;
+
+}
+.box1 {
+  background-image: url("/assets/img/7.jpeg");
+}
+.box2 {
+  background-image: url("/assets/img/2.jpeg");
+}
+.box3 {
+  background-image: url("/assets/img/1.jpeg");
+}
+.box4 {
+  background-image: url("/assets/img/3.jpeg");
+}
+.KMUTNB h2 {
+  font-size: 1.4rem;
+  letter-spacing: 2.5px;
+  font-family: Times;
+  margin-bottom: 3%;
+}
+.text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.txt h1 {
+  font-size: 4.5rem;
+  letter-spacing: auto;
+  font-family: Times;
+  margin-bottom: 4%;
+}
+.KMUTNB p {
+  opacity: 1;
+  color: #ffffff;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+.tnx h2 i {
+  color: #fd7e13;
+}
+.card div {
+  transition: 1s;
+}
+.card div:hover {
+  transition: 0.5s;
+  transform: translateY(-15px);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}

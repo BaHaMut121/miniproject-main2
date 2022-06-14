@@ -1,1 +1,47 @@
-<p>add-coursbe-by-teacher works!</p>
+<div class="container">
+  <div class="hh">
+    <div class="homepage-wrapper" fxLayout="" fxLayoutAlign="center center">
+
+  <h1>เพิ่มวิชาที่จะสอน</h1>
+
+  </div>
+  <form  [formGroup]="formsubject">
+  <div class="line row m-3">
+    <div class="col mt-3"><b>รหัสวิชา</b>
+    <input type="text" class="form-control" placeholder="" formControlName="coursetext_id">
+  </div>
+  <div class="col mt-3"><b>ชื่อวิชา</b>
+    <input type="text" class="form-control" placeholder="" formControlName="course_Name">
+  </div>
+  </div>
+
+  <div class="line row m-3">
+    <div class="col mt-3">
+      <b class="form-label">หน่วยกิต</b>
+      <input type="text" class="form-control" formControlName="credit" placeholder="" >
+    </div>
+    <div class="col mt-3">
+      <b class="form-label">ตอนเรียน</b>
+      <input type="text" class="form-control" formControlName="section" placeholder="">
+    </div>
+    <div class="col mt-3">
+      <b class="form-label">เวลาเรียน</b>
+      <input type="text" class="form-control" formControlName="class_date" placeholder="">
+    </div>
+  </div>
+  <div class="line row m-3">
+    <div class="col mt-3">
+      <b class="form-label">ชื่ออาจารย์</b>
+      <input type="text" class="form-control" formControlName="lecturer" placeholder="" >
+    </div>
+    <div class="col mt-3">
+      <b class="form-label">ปีการศึกษา</b>
+      <input type="text" class="form-control" formControlName="year" placeholder="">
+    </div>
+  </div>
+</form>
+  <button type="button" class="btn btn-success" (click)="onAddsubject(formsubject.value)">ยืนยันการเพิ่มวิชาสอน</button>
+  </div>
+</div>
+
+

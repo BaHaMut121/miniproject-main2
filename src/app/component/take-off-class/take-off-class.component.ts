@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { book } from '../../test-regi';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-take-off-class',
